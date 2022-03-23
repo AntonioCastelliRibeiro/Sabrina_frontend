@@ -1,0 +1,9 @@
+import { IData } from "./interface";
+
+export const data: IData = {
+    textFirst: "Por um lado, as pinceladas e a luminosidade de seus painéis lembram as pinturas tradicionais flamengas, nas quais os detalhes, a qualidade do sombreamento e a suavidade da tez de cada personagem são apresentados com maestria. Por outro lado, o simbolismo sutil e a presença contundente das figuras trazem um ar inesperado de modernidade acessível.",
+    textSec: "Muito de seu trabalho é inspirado na relação entre a psicologia humana e os arquétipos míticos. Os temas duradouros são tecidos em surrealidades repletas de símbolos e narrativas visuais. As imagens enigmáticas incorporam elementos contraditórios como novidade e nostalgia, inocência e sensualidade, força e fragilidade, espelhando a complexidade de nossa psique.",
+    textThird: "Chie Yoshii nasceu no ano de 1974 em Kochi, Japão. Ela se mudou para os EUA para completar seu BFA no Massachusetts College of Art em 2000 e estudou com o pintor realista Adrian Gottlieb de 2002 a 2008. Suas pinturas foram exibidas em galerias em todo o mundo, incluindo Dorothy Circus Gallery na Itália, Urban Nation na Alemanha, Gallery Bern Art no Japão, Corey Helford Gallery em Los Angeles e William Baczek Fine Arts em Northampton, MA. Atualmente vive e trabalha em Los Angeles.",
+    linkMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.5270653882408!2d-53.065593984285236!3d-26.081708265340232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f072db7f08c9b5%3A0x5eb73378cc91d3e!2sR.%20Ant%C3%B4nio%20Carneiro%20Neto%20-%20Alvorada%2C%20Francisco%20Beltr%C3%A3o%20-%20PR%2C%2085601-090!5e0!3m2!1spt-BR!2sbr!4v1645123549155!5m2!1spt-BR!2sbr",
+    imgCapa: 'https://images.unsplash.com/photo-1505569127510-bde1536937bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+}
