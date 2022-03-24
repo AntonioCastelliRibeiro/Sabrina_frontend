@@ -10,6 +10,7 @@ import { dataDesc, IMAGES } from "./data";
 import SuspenseComp from "./SuspenseComp";
 import CompHoverSec from "./CompHoverSec";
 import CompThird from "./CompThird";
+import CompFour from "./CompFour";
 
 const MyImageMasonry = React.lazy(() => import("../../MyImageMasonry"));
 
@@ -25,9 +26,10 @@ export default function FormPrincipal() {
         <Content bgcolor={theme.palette.primary.dark}>
             <Container maxWidth="xl">
                 <Stack alignItems="center" spacing={2}>
-                    <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
+                    <CompFour />
+                    {/* <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
                     <CompHoverSec />
-                    <CompThird />
+                    <CompThird /> */}
                 </Stack>
             </Container>
         </Content>
