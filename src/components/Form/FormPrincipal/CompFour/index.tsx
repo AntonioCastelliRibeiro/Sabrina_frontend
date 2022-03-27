@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Grid, Stack, useTheme } from "@mui/material";
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { data } from "./data";
 import { CardActionAreaComp, ContainerComp, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
 import { transition } from "../../FormAbout/motion";

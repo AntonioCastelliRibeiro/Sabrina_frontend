@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, Stack, useTheme } from "@mui/material";
-import { data, dataDesc } from "./data";
-import { CardActionAreaComp, ContainerComp, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
+import { useTheme } from "@mui/material";
+import { dataDesc } from "./data";
+import { ContainerComp, TransitionComp } from "./styles";
 
 import { transition } from "../../FormAbout/motion";
 import CompDescTop from "../CompDescTop";

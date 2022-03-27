@@ -1,6 +1,5 @@
 import React from "react";
 import { Stack, useTheme } from "@mui/material";
-import { data } from "./data";
 import { ContainerComp, Content, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
 import { transition } from "../../FormAbout/motion";
 import { IData } from "./interface";

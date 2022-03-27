@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 
 
 // import { Container } from "./styles"
@@ -6,14 +6,10 @@ import CompDescTop from "./CompDescTop";
 import { Container, useTheme, Stack } from "@mui/material";
 import { Content } from "../FormAbout/styles";
 
-import { dataDesc, IMAGES } from "./data";
-import SuspenseComp from "./SuspenseComp";
+import { dataDesc } from "./data";
 import CompHoverSec from "./CompHoverSec";
 import CompThird from "./CompThird";
 import CompFour from "./CompFour";
-
-const MyImageMasonry = React.lazy(() => import("../../MyImageMasonry"));
-
 
 export default function FormPrincipal() {
     const theme = useTheme();
