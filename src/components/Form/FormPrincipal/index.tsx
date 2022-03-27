@@ -26,10 +26,10 @@ export default function FormPrincipal() {
         <Content bgcolor={theme.palette.primary.dark}>
             <Container maxWidth="xl">
                 <Stack alignItems="center" spacing={2}>
-                    <CompFour />
-                    {/* <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
+                    <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
                     <CompHoverSec />
-                    <CompThird /> */}
+                    <CompThird />
+                    <CompFour />
                 </Stack>
             </Container>
         </Content>
