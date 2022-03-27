@@ -1,8 +1,8 @@
-import { ThemeOptions } from "@mui/material";
+import { Theme } from "@mui/material";
 
 export interface ITheme {
     textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
-    theme: ThemeOptions;
+    theme: Theme;
 }
 
 

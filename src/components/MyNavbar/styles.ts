@@ -1,8 +1,8 @@
-import { AppBar, IconButton, Stack, ThemeOptions, Typography } from "@mui/material";
+import { AppBar, IconButton, Stack, Theme, Typography } from "@mui/material";
 import styled from "styled-components";
 
 interface ITheme {
-    theme: ThemeOptions;
+    theme: Theme;
 }
 
 export const StackComp = styled(Stack) <ITheme>`

@@ -1,5 +1,5 @@
-import { ThemeOptions } from "@mui/material";
+import { Theme } from "@mui/material";
 
 export interface ITheme {
-    theme: ThemeOptions;
+    theme: Theme;
 }
