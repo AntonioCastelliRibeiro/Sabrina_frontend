@@ -25,7 +25,7 @@ export const ContentButton = styled.div<ITheme>`
 
 `;
 
-export const ContainerComp = styled(Container)<ITheme>`
+export const ContainerComp = styled(Container) <ITheme>`
     height: 100%;
     background-color: ${props => props.theme.palette.primary.dark};
 `;
