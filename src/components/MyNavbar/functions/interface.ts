@@ -1,5 +1,7 @@
 export interface IPage {
     inicio: boolean,
-    disponiveis: boolean,
+    seguidores: boolean,
+    curtidas: boolean,
+    comentarios: boolean,
     sobre: boolean
 }

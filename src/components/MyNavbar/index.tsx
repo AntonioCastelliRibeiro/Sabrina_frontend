@@ -14,10 +14,17 @@ export default function MyNavbar(props: IMyNavbar) {
     const navigate = useNavigate();
     const { window } = props;
     const trigger = useScrollTrigger({ target: window ? window() : undefined, });
-    const [onPage, setPage] = useState({ inicio: false, disponiveis: false, sobre: false })
+    const [onPage, setPage] = useState({ inicio: false, seguidores: false, curtidas: false, comentarios: false, sobre: false })
 
     useEffect(() => {
-        setPage({ inicio: (location.pathname === '/'), disponiveis: (location.pathname === '/disponiveis'), sobre: (location.pathname === '/sobre') });
+        setPage({
+            inicio: (location.pathname === '/'),
+            seguidores: (location.pathname === '/seguidores'),
+            curtidas: (location.pathname === '/curtidas'),
+            comentarios: (location.pathname === '/comentarios'),
+            sobre: (location.pathname === '/sobre'),
+
+        });
     }, [location.pathname]);
 
     const handleClick = (APage: string) => (
@@ -34,11 +41,11 @@ export default function MyNavbar(props: IMyNavbar) {
                             variant="h6"
                             noWrap
                             sx={{ mr: 2 }}
-                            small={theme.breakpoints.down('sm')}
+                            theme={theme}
                         >
                             Mundi Seguidores
                         </TypograpyComp>
-                        <StackComp small={theme.breakpoints.down('sm')} direction="row" spacing={1}>
+                        <StackComp theme={theme} direction="row" spacing={1}>
                             {pages.map((data) => (
                                 <MyButton
                                     bgcolorselect={returnBgColor(data.page, onPage)}
@@ -58,7 +65,7 @@ export default function MyNavbar(props: IMyNavbar) {
                             size="large"
                             edge="start"
                             color="inherit"
-                            small={theme.breakpoints.down('sm')}
+                            theme={theme}
                             onClick={() => props.hanldeOpenModal()}
                         >
                             <MenuIcon />

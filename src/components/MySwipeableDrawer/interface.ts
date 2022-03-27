@@ -1,4 +1,4 @@
-import { Theme } from "@mui/material";
+import { ThemeOptions } from "@mui/material";
 
 export interface IMySwipeableDrawer {
     openModal: boolean;
@@ -7,7 +7,7 @@ export interface IMySwipeableDrawer {
 }
 
 export interface ITheme {
-    theme: Theme;
+    theme: ThemeOptions;
 }
 
 export interface IContentPuller extends ITheme {
