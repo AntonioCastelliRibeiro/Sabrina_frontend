@@ -1,72 +1,60 @@
 import { Container, Stack, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 import { motion } from "framer-motion";
-import styled from "styled-components";
 import { ITheme } from "./interface";
 
-export const ContainerComp = styled(Container)`
-    ${props => props.theme.breakpoints.down('sm')} {
-        padding: 0px;
+export const ContainerComp = styled(Container)(({ theme }) => ({
+    [theme.breakpoints.down("md")]: {
+        padding: "0px",
+    },
+}));
+
+export const Content = styled(Stack)(() => ({
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+}));
+
+export const TransitionComp = styled(motion.div)(() => ({
+    height: "inherit",
+    width: "inherit",
+    display: "inherit",
+    flexDirection: "inherit",
+    alignItems: "inherit",
+    justifyContent: "inherit",
+    padding: "inherit",
+    margin: "inherit",
+}));
+
+export const TypograpyTitle = styled(Typography)<ITheme>(({ theme, textAlign }) => ({
+    textAlign: textAlign || "center",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    color: theme.palette.secondary.light,
+    [theme.breakpoints.down('sm')]: {
+        textAlign: "center"
     }
-`;
+}));
 
-export const Content = styled(Stack)`
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-`;
-
-export const TransitionComp = styled(motion.div)`
-    height: inherit;
-    width: inherit;
-    display: inherit;
-    flex-direction: inherit;
-    align-items: inherit;
-    justify-content: inherit;
-    padding: inherit;
-    margin: inherit;
-`;
-
-export const TypograpyTitle = styled(Typography) <ITheme>`
-    text-align: ${props => props.textAlign || "center"};
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: ${props => props.theme.palette.secondary.light};
-    font-size: ${props => props.theme.typography.h3};
-    ${props => props.theme.breakpoints.down('sm')} {
-        text-align: center;
-        font-size: ${props => props.theme.typography.h4};
+export const TypograpySubTitle = styled(Typography)<ITheme>(({ theme, textAlign }) => ({
+    textAlign: textAlign || "center",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    color: theme.palette.secondary.light,
+    [theme.breakpoints.down('sm')]: {
+        padding: "0px 5px 0px 5px",
     }
-`;
+}));
 
-export const TypograpySubTitle = styled(Typography) <ITheme>`
-    text-align: ${props => props.textAlign || "center"};
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: ${props => props.theme.palette.secondary.light};
-    font-size: ${props => props.theme.typography.h6};
-    ${props => props.theme.breakpoints.down('sm')} {
-        padding: 0px 5px 0px 5px;
-        font-size: ${props => props.theme.typography.h6};
+export const StackContent = styled(Stack)<ITheme>(({ theme }) => ({
+    height: "100%",
+    width: "auto",
+    [theme.breakpoints.down('sm')]: {
+        width: "100%",
     }
-`;
-
-export const StackContent = styled(Stack) <ITheme>`
-    height: 100%;
-    width: auto;
-    ${props => props.theme.breakpoints.down('sm')} {
-        width: 100%;
-    }
-`;
-
-export const TypograpyButton = styled(Typography) <ITheme>`
-    font-size: ${props => props.theme.typography.body1};
-    ${props => props.theme.breakpoints.down('sm')} {
-        font-size: ${props => props.theme.typography.body2};
-    }
-`;
-
+}));
 
 

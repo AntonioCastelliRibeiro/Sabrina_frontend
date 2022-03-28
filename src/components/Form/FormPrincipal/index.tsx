@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
-
-
-// import { Container } from "./styles"
 import CompDescTop from "./CompDescTop";
 import { Container, useTheme, Stack } from "@mui/material";
 import { Content } from "../FormAbout/styles";
-
 import { dataDesc } from "./data";
 import CompHoverSec from "./CompHoverSec";
 import CompThird from "./CompThird";

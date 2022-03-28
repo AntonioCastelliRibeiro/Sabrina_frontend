@@ -3,9 +3,6 @@ import { Global } from '@emotion/react';
 import { Box, Stack, useTheme, styled, CssBaseline, SwipeableDrawer, useMediaQuery } from "@mui/material";
 import { IMySwipeableDrawer } from './interface';
 import { useNavigate } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home';
-import EventAvailableIcon from '@mui/icons-material/EventAvailable';
-import InfoIcon from '@mui/icons-material/Info';
 import { ContainerComp, ContentButton, ContentPuller } from './styles';
 import { MyButton } from '../MyButton/styles';
 import { pages } from '../MyNavbar/data';
@@ -29,7 +26,7 @@ const Puller = styled(Box)(({ theme }) => ({
 export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
   const theme = useTheme();
   const navigate = useNavigate();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   useEffect(() => {
     props.setCloseModal();
@@ -48,7 +45,7 @@ export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
       <Global
         styles={{
           '.MuiDrawer-root > .MuiPaper-root': {
-            height: `253px`,
+            height: `280px`,
             overflow: 'visible',
           },
         }}
@@ -75,6 +72,11 @@ export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
               {pages.map((data) => (
                 <MyButton
                   theme={theme}
+                  sx={{ fontSize: { 
+                    xs: theme.typography.body2.fontSize, 
+                    sm: theme.typography.body1.fontSize, 
+                    md: theme.typography.body1.fontSize, 
+                } }}
                   key={data.page}
                   onClick={toggleDrawer(data.router)}
                   bgcolorselect={theme.palette.primary.dark}

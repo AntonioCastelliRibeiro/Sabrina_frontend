@@ -17,7 +17,6 @@ export default function MyNavbar(props: IMyNavbar) {
     const [onPage, setPage] = useState({ inicio: false, seguidores: false, curtidas: false, comentarios: false, sobre: false })
 
     useEffect(() => {
-        console.log(theme.typography);
         setPage({
             inicio: (location.pathname === '/'),
             seguidores: (location.pathname === '/seguidores'),
