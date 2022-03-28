@@ -17,6 +17,7 @@ export default function MyNavbar(props: IMyNavbar) {
     const [onPage, setPage] = useState({ inicio: false, seguidores: false, curtidas: false, comentarios: false, sobre: false })
 
     useEffect(() => {
+        console.log(theme.typography);
         setPage({
             inicio: (location.pathname === '/'),
             seguidores: (location.pathname === '/seguidores'),
@@ -48,6 +49,13 @@ export default function MyNavbar(props: IMyNavbar) {
                         <StackComp theme={theme} direction="row" spacing={1}>
                             {pages.map((data) => (
                                 <MyButton
+                                    sx={{ fontSize: { 
+                                            xs: theme.typography.body2.fontSize, 
+                                            sm: theme.typography.body2.fontSize, 
+                                            md: theme.typography.body2.fontSize, 
+                                            lg: theme.typography.body1.fontSize, 
+                                            xl: theme.typography.body1.fontSize 
+                                        } }}
                                     bgcolorselect={returnBgColor(data.page, onPage)}
                                     theme={theme}
                                     key={data.page}
