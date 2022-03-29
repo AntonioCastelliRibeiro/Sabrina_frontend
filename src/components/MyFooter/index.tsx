@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 
 import InstagramIcon from '@mui/icons-material/Instagram';
-import logo from "../../image/logo.jpg";
 import { useNavigate } from "react-router-dom";
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import InfoIcon from '@mui/icons-material/Info';
@@ -89,7 +88,7 @@ const Foot = function FootComp() {
                         color={"textSecondary"}
                         style={{ color: "#fff", letterSpacing: "1px" }}
                     >
-                        Designer Antonio Castelli © Tony Studios 2019-2022 Todos os
+                        Designer Antonio Castelli © Tony Studios 2019-2022. Todos os
                         Direitos Reservados
                     </Typography>
                 </Box>

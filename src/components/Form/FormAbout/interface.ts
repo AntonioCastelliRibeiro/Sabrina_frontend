@@ -3,6 +3,7 @@ export interface IContent {
 }
 
 export interface IData {
+    subTitle: string;
     textFirst: string;
     textSec: string;
     textThird: string;

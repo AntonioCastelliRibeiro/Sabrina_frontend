@@ -17,12 +17,18 @@ export const CardActionAreaComp = styled(CardActionArea)`
     border-radius: 9px;
 `;
 
-export const CardMediaComp = styled(CardMedia)`
-    height: 500px;
-    width: 100%;
-    border-radius: inherit;
-`;
-
+export const CardMediaComp = styled(CardMedia)(({ theme })=>({
+    height: "800px",
+    width: "100%",
+    borderRadius: "inherit",
+    [theme.breakpoints.down('md')]: {
+        height: "500px",
+    },
+    [theme.breakpoints.down('sm')]: {
+        height: "300px",
+    }
+}))
+   
 export const IrFrameComp = styled.iframe`
     height: 500px;
     width: 100%;

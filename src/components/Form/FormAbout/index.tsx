@@ -1,9 +1,23 @@
 import React, { useEffect } from "react";
-import { Container, Stack, Typography, useTheme } from "@mui/material";
-import { CardActionAreaComp, CardMediaComp, Content, IrFrameComp } from "./styles";
+import { Container, Stack, useTheme } from "@mui/material";
+import { CardActionAreaComp, CardMediaComp, Content } from "./styles";
 import { data } from "./data";
 import { transition } from "./motion";
 import { TransitionComp, TypograpySubTitle } from "../FormPrincipal/CompDescTop/styles";
+import CompDescTop from "../FormPrincipal/CompDescTop";
+const imgQuemSomos = "https://sabrina-bucket.s3.sa-east-1.amazonaws.com/quemsomos.png";
+
+const dataText = [
+    {
+        text: data.textFirst,
+    }, 
+    {
+        text: data.textSec,
+    }, 
+    {
+        text: data.textThird,
+    }
+]
 
 export default function FormAbout() {
     const theme = useTheme();
@@ -16,20 +30,40 @@ export default function FormAbout() {
         <Content bgcolor={theme.palette.primary.dark} >
             <Container maxWidth="lg">
                 <Stack spacing={3} >
+
+                    <TransitionComp {...transition}>
+                        <CompDescTop title="Sobre nós" subTitle={data.subTitle} />
+                        {/* <CardActionAreaComp>
+                            <CardMediaComp image={data.imgCapa} />
+                        </CardActionAreaComp> */}
+                    </TransitionComp>
+
+                    <TransitionComp {...transition}>
+                        <Stack spacing={3}>
+                            {dataText.map((data, key)=>(
+                                <TypograpySubTitle 
+                                sx={{ fontSize: { 
+                                    xs: theme.typography.body1.fontSize, 
+                                    sm: theme.typography.body1.fontSize, 
+                                    md: theme.typography.h4.fontSize, 
+                                    lg: theme.typography.h5.fontSize, 
+                                    xl: theme.typography.h5.fontSize 
+                                    } 
+                                }}
+                                theme={theme} 
+                                color={theme.palette.secondary.light} 
+                                textAlign="left" 
+                                children={data.text} 
+                            />
+                            ))}
+                        </Stack>                        
+                    </TransitionComp>
+
                     <TransitionComp {...transition}>
                         <CardActionAreaComp>
-                            <CardMediaComp image={data.imgCapa} />
+                            <CardMediaComp theme={theme} image={imgQuemSomos} />
                         </CardActionAreaComp>
-                    </TransitionComp>
-
-                    <TransitionComp {...transition}>
-                        <TypograpySubTitle theme={theme} color={theme.palette.secondary.light} variant="h5" textAlign="left" children={data.textFirst} />
-                        <TypograpySubTitle theme={theme} color={theme.palette.secondary.light} variant="h5" textAlign="left" children={data.textSec} />
-                        <TypograpySubTitle theme={theme} color={theme.palette.secondary.light} variant="h5" textAlign="left" children={data.textThird} />
-                        <Typography color={theme.palette.secondary.light} variant="h6" textAlign="left" children={"Localização do studio:"} />
-                    </TransitionComp>
-
-                    <IrFrameComp src={data.linkMaps} loading="lazy" />
+                    </TransitionComp>                    
                 </Stack>
             </Container>
         </Content>
