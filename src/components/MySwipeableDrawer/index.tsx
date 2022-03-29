@@ -1,27 +1,13 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
-import { Box, Stack, useTheme, styled, CssBaseline, SwipeableDrawer, useMediaQuery } from "@mui/material";
+import { Box, Stack, useTheme, CssBaseline, SwipeableDrawer, useMediaQuery } from "@mui/material";
 import { IMySwipeableDrawer } from './interface';
 import { useNavigate } from 'react-router-dom';
-import { ContainerComp, ContentButton, ContentPuller } from './styles';
+import { ContainerComp, ContentButton, ContentPuller, Puller, Root } from './styles';
 import { MyButton } from '../MyButton/styles';
 import { pages } from '../MyNavbar/data';
 
 const drawerBleeding = 56;
-
-const Root = styled('div')(({ theme }) => ({
-  height: '100%',
-}));
-
-const Puller = styled(Box)(({ theme }) => ({
-  width: 30,
-  height: 6,
-  backgroundColor: "#fff",
-  borderRadius: 3,
-  position: 'absolute',
-  top: 10,
-  left: 'calc(50% - 15px)',
-}));
 
 export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
   const theme = useTheme();

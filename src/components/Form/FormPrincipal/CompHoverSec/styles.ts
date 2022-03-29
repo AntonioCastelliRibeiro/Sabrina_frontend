@@ -74,12 +74,10 @@ export const TypograpyButton = styled(Typography) <ITheme>`
     }
 `;
 
-export const CardActionAreaComp = styled(CardActionArea) <ITheme> `
-    padding: 10px;
-    height: 100%;
-    border-radius: 9px;
-    color: ${props => props.theme.palette.secondary.main};
-`;
-
-
-
+export const CardActionAreaComp = styled(CardActionArea) <ITheme>(({ theme })=>({
+    padding: "10px",
+    height: "100%",
+    borderRadius: "9px",
+    color: theme.palette.secondary.main
+})) 
+    

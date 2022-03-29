@@ -1,6 +1,20 @@
-import { Container, Theme } from "@mui/material";
+import { Box, Container, Theme } from "@mui/material";
 import styled from "styled-components";
 import { IContentPuller, ITheme } from "./interface";
+
+export const Root = styled('div')(({ theme }) => ({
+    height: '100%',
+  }));
+  
+export const Puller = styled(Box)(({ theme }) => ({
+    width: 30,
+    height: 6,
+    backgroundColor: "#fff",
+    borderRadius: 3,
+    position: 'absolute',
+    top: 10,
+    left: 'calc(50% - 15px)',
+  }));
 
 export const ContentPuller = styled.div<IContentPuller>`
     background-color: ${props => props.theme.palette.primary.dark};

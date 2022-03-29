@@ -14,19 +14,25 @@ export const dataDesc: IDataDesc = {
 
 export const data: IData[] = [
     {
-        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<ThumbUpIcon color="secondary" style={{ height: "300px", width: "300px" }} />} />,
+        id: 0,
+        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<ThumbUpIcon color="secondary" style={{ height: "100%", width: "100%" }} />} />,
         title: "Curtidas",
-        subtitle: "Ganhe de 17 a 700 curtidas reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta."
+        subtitle: "Ganhe de 17 a 700 curtidas reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta.",
+        selected: true,
     },
     {
-        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<AddCommentIcon color="secondary" style={{ height: "300px", width: "300px" }} />} />,
+        id: 1,
+        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<AddCommentIcon color="secondary" style={{ height: "100%", width: "100%" }} />} />,
         title: "Comentários",
-        subtitle: "Ganhe de 17 a 700 comentários reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta."
+        subtitle: "Ganhe de 17 a 700 comentários reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta.",
+        selected: false,
     },
     {
-        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<AddBoxIcon color="secondary" style={{ height: "300px", width: "300px" }} />} />,
+        id: 2,
+        icon: <ContentMotionIcon transition={{ duration: 2, type: "tween" }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} children={<AddBoxIcon color="secondary" style={{ height: "100%", width: "100%" }} />} />,
         title: "Seguidores",
-        subtitle: "Ganhe de 17 a 700 seguidores reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta."
+        subtitle: "Ganhe de 17 a 700 seguidores reais e brasileiros todos os dias no seu instagram. Não precisa informar a senha e nem seguir ninguém de volta.",
+        selected: false,
     }
 ]
 

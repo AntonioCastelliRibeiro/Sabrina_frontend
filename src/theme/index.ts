@@ -15,6 +15,11 @@ const theme = createTheme({
             light: "#ffffff",
             dark: "#c7c7c7"
         }
+    },
+    transitions: {
+        easing: {
+            easeIn: "0.3s ease"
+        }
     }
 });
 

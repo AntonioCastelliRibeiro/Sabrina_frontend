@@ -1,26 +1,27 @@
-import React, { useState } from "react";
-import { Grid, Stack, useTheme } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { AnimatePresence, motion } from 'framer-motion';
 import { data } from "./data";
-import { CardActionAreaComp, ContainerComp, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
+import { CardActionAreaComp, ContainerComp, ContentIconMdDown, ContentIconMdUp, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
 import { transition } from "../../FormAbout/motion";
-
-
+import { IData } from "./interface";
 
 export default function CompFour() {
     const theme = useTheme();
+    const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
     const [icon, setIcon] = useState(data[0].icon);
-    // const controlerImg = useAnimation();
-    // useEffect(() => {
-    //     sequenceTransition();
-    // }, [icon]);
+    const [dataComp, setDataComp] = useState<IData[]>(data);
 
-    // const sequenceTransition = async () => {
-    //     await controlerImg.start({ opacity: 0 });
-    //     return await controlerImg.start({ opacity: 1 });
-    // }
+    useEffect(()=>{
+        setDataComp(data);        
+    }, []);
 
-    const handleImg = (AIcon: React.ReactNode) => {
+    const handleImg = (AIcon: React.ReactNode, AId: number) => {
+        let newData = dataComp;
+        dataComp.map((data, key)=>{
+            newData[key].selected = data.id === AId;
+            return setDataComp(newData);
+        });
         setIcon(AIcon);
     }
 
@@ -28,27 +29,26 @@ export default function CompFour() {
         <ContainerComp theme={theme} maxWidth="lg" >
             <TransitionComp {...transition} >
                 <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }}>
-                    <Stack width="100%" >
+                    <Stack justifyContent={"center"} width="100%" >
                         <AnimatePresence>
-                            {icon}
+                            {isDownMd ? <Stack direction="row">{dataComp.map((data)=>(<ContentIconMdDown children={data.icon} />))}</Stack> : <ContentIconMdUp children={icon} />}
                         </AnimatePresence>
                     </Stack>
-                    <Grid container spacing={2} style={{ margin: 0, width: "100%" }}>
-                        {data.map((data, key) => (
+                    <Grid container spacing={isDownMd ? 0 : 2} style={{ margin: 0, width: "100%" }}>
+                        {dataComp.map((data, key) => (
                             <Grid
                                 item
                                 key={key}
-                                style={{ margin: 0 }}
+                                style={{ margin: 0, paddingTop: "16px" }}
                                 xs={12}
                                 sm={12}
                                 md={12}
                                 lg={12}
                                 xl={12}
                             >
-                                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} onHoverStart={() => handleImg(data.icon)} >
-                                    <CardActionAreaComp theme={theme}>
+                                <motion.div onHoverStart={() => handleImg(data.icon, data.id)} >
+                                    <CardActionAreaComp selected={isDownMd ? true : data.selected} theme={theme}>
                                         <Stack alignItems={"center"} spacing={2}>
-                                            {/* <div children={data.icon} /> */}
                                             <TypograpyTitle theme={theme} children={data.title} />
                                             <ContainerComp theme={theme} maxWidth="sm" >
                                                 <TypograpySubTitle theme={theme} children={data.subtitle} />
