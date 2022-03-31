@@ -12,9 +12,7 @@ import {
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useNavigate } from "react-router-dom";
-import EventAvailableIcon from '@mui/icons-material/EventAvailable';
-import InfoIcon from '@mui/icons-material/Info';
-import { Content, ContentBtn, ContentFlexLeft, ContentFlexLeftSec, ContentIcon, ContentLeft } from "./styles";
+import { Content, ContentFlexLeft, ContentFlexLeftSec, ContentIcon, ContentLeft } from "./styles";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { MyButton } from "../MyButton/styles";
 import { pages } from "../MyNavbar/data";

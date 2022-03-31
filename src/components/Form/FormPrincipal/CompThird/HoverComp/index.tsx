@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { AnimatePresence, motion } from 'framer-motion';
 import { data } from "./data";
-import { CardActionAreaComp, ContainerComp, ContentIconMdDown, ContentIconMdUp, ContentImg, ImgComp, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
-import { transition } from "../../FormAbout/motion";
+import { CardActionAreaComp, ContainerComp, ContentIconMdUp, ContentImg, TransitionComp, TypograpySubTitle, TypograpyTitle } from "./styles";
+import { transition } from "../../../FormAbout/motion";
 import { IData } from "./interface";
 
-export default function CompFour() {
+export default function HoverComp() {
     const theme = useTheme();
     const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
     const [icon, setIcon] = useState(data[0].icon);
@@ -26,7 +26,6 @@ export default function CompFour() {
     }
 
     return (
-        <ContainerComp theme={theme} maxWidth="lg" >
             <TransitionComp {...transition} >
                 <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }}>
                     {isDownMd 
@@ -35,7 +34,6 @@ export default function CompFour() {
                         :
                         <Stack justifyContent={"center"} width="100%" >
                             <AnimatePresence>
-                                {/* {isDownMd ? <Stack direction="row">{dataComp.map((data)=>(<ContentIconMdDown children={data.icon} />))}</Stack> : <ContentIconMdUp children={icon} />} */}
                                 <ContentIconMdUp children={icon} />
                             </AnimatePresence>
                         </Stack>
@@ -55,8 +53,7 @@ export default function CompFour() {
                                 <motion.div onHoverStart={() => handleImg(data.icon, data.id)} >
                                     <CardActionAreaComp selected={isDownMd ? true : data.selected} theme={theme}>
                                         <Stack alignItems={"center"} spacing={2}>
-                                        {isDownMd ? <ContentImg children={data.icon}/> : false}
-
+                                            {isDownMd ? <ContentImg children={data.icon}/> : false}
                                             <TypograpyTitle theme={theme} children={data.title} />
                                             <ContainerComp theme={theme} maxWidth="sm" >
                                                 <TypograpySubTitle theme={theme} children={data.subtitle} />
@@ -69,7 +66,5 @@ export default function CompFour() {
                     </Grid>
                 </Stack>
             </TransitionComp>
-        </ContainerComp >
-
     )
 }

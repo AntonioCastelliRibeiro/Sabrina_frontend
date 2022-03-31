@@ -85,7 +85,9 @@ export const CardActionAreaComp = styled(CardActionArea) <ITheme> (({ theme, sel
     height: "100%",
     borderRadius: "9px",
     color: theme.palette.secondary.main,
-    border: selected ? "2px solid #fff" : "2px solid transparent",
+    backgroundColor: theme.palette.primary.main,
+    border: selected ? `2px solid ${theme.palette.primary.light}` : "2px solid transparent",
+    boxShadow: selected ? theme.shadows[10] : theme.shadows[0],
     transition: theme.transitions.easing.easeIn
 }));
 

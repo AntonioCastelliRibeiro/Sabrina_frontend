@@ -78,6 +78,7 @@ export const CardActionAreaComp = styled(CardActionArea) <ITheme>(({ theme })=>(
     padding: "10px",
     height: "100%",
     borderRadius: "9px",
-    color: theme.palette.secondary.main
+    color: theme.palette.secondary.main,
+    // backgroundColor: theme.palette.primary.main
 })) 
     

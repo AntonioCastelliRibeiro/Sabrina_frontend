@@ -5,7 +5,7 @@ import { Content } from "../FormAbout/styles";
 import { dataDesc } from "./data";
 import CompHoverSec from "./CompHoverSec";
 import CompThird from "./CompThird";
-import CompFour from "./CompFour";
+import CardImage from "../../MyCardImage";
 
 export default function FormPrincipal() {
     const theme = useTheme();
@@ -16,14 +16,14 @@ export default function FormPrincipal() {
 
     return (
         <Content bgcolor={theme.palette.primary.dark}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Stack alignItems="center" spacing={2}>
                     <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
                     <CompHoverSec />
                     <CompThird />
-                    <CompFour />
                 </Stack>
             </Container>
+            <CardImage />
         </Content>
     )
 }

@@ -10,7 +10,7 @@ export default function CompHoverSec() {
     const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
-        <ContainerComp theme={theme} maxWidth="lg" >
+        // <ContainerComp theme={theme} maxWidth="lg" >
             <TransitionComp {...transition} >
                 <Grid container spacing={isDownMd ? 0 : 2} style={{ margin: 0, width: "100%" }}>
                     {data.map((data, key) => (
@@ -37,7 +37,7 @@ export default function CompHoverSec() {
                     ))}
                 </Grid>
             </TransitionComp>
-        </ContainerComp >
+        // </ContainerComp >
 
     )
 }

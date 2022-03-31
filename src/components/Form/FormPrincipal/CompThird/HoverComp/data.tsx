@@ -1,5 +1,5 @@
 import { IData } from './interface';
-import { IData as IDataDesc } from "../CompDescTop/interface";
+import { IData as IDataDesc } from "../../CompDescTop/interface";
 
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
