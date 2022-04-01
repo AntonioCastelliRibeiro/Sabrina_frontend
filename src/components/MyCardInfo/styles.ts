@@ -1,18 +1,37 @@
-import { CardActionArea, Stack, styled, Typography } from "@mui/material";
+import { Button, Card, CardActionArea, Stack, styled, Typography } from "@mui/material";
 
 export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
   borderRadius: "9px",
   color: "#fff"
 }));
 
+export const ButtonComp = styled(Button)(({ theme }) => ({
+  boxShadow: theme.shadows[2],
+  '&:hover': { 
+    boxShadow: theme.shadows[5]
+  },
+  transition: theme.transitions.easing.easeIn
+}));
+
+export const CardComp = styled(Card)(({ theme }) => ({
+  backgroundColor: 'transparent', 
+  height: "600px",
+  width: "100%", 
+  boxShadow: theme.shadows[2],
+  '&:hover': { 
+    boxShadow: theme.shadows[5]
+  },
+  transition: theme.transitions.easing.easeIn,
+}));
+
 export const StackContent = styled(Stack)(({ theme })=>({
-    boxShadow: theme.shadows[2],
+    // boxShadow: theme.shadows[5],
     overflow: "hidden",
     borderRadius: "inherit",
-    backgroundColor: theme.palette.primary.main,
-    "&:hover": { 
-        boxShadow: theme.shadows[5] 
-    },
+    backgroundColor: theme.palette.primary.dark,
+    // "&:hover": { 
+    //     boxShadow: theme.shadows[10] 
+    // },
     transition: theme.transitions.easing.easeIn
 }));
 
@@ -34,7 +53,7 @@ export const TypographyTitle = styled(Typography)(({ theme }) => ({
 
 export const TypographySubTitle = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
-  color: "#270644",
+  color: theme.palette.secondary.dark,
   [theme.breakpoints.up("xs")]: {
     fontSize: theme.typography.h5.fontSize,
     textAlign: "center",
