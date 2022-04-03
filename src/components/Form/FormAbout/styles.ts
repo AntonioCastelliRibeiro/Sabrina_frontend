@@ -1,14 +1,12 @@
-import { CardActionArea, CardMedia } from "@mui/material";
-import styled from "styled-components";
-import { IContent } from "./interface";
+import { CardActionArea, CardMedia, styled } from "@mui/material";
 
-export const Content = styled.div<IContent>`
-    padding-top: 70px;
-    padding-bottom: 70px;
-    min-height: 100vh;
-    width: 100%;
-    background-color: ${props => props.bgcolor};
-`;
+export const Content = styled('div')(({ theme })=>({
+    paddingTop: '70px',
+    paddingBottom: '70px',
+    minHeight: '100vh',
+    width: '100%',
+    backgroundColor: theme.palette.primary.dark,
+}));
 
 export const CardActionAreaComp = styled(CardActionArea)`
     height: 100%;
@@ -27,9 +25,9 @@ export const CardMediaComp = styled(CardMedia)(({ theme })=>({
     [theme.breakpoints.down('sm')]: {
         height: "300px",
     }
-}))
+}));
    
-export const IrFrameComp = styled.iframe`
+export const IrFrameComp = styled('iframe')`
     height: 500px;
     width: 100%;
     border-radius: 9px;

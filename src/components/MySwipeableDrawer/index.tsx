@@ -31,7 +31,7 @@ export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
       <Global
         styles={{
           '.MuiDrawer-root > .MuiPaper-root': {
-            height: `280px`,
+            height: `180px`,
             overflow: 'visible',
           },
         }}

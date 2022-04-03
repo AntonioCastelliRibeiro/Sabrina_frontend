@@ -27,7 +27,7 @@ export default function FormAbout() {
     }, []);
 
     return (
-        <Content bgcolor={theme.palette.primary.dark} >
+        <Content>
             <Container maxWidth="lg">
                 <Stack spacing={3} >
 

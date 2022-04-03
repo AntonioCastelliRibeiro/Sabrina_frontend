@@ -12,19 +12,9 @@ export const pages: IPages[] = [
         icon: <HomeIcon />
     },
     {
-        page: 'Seguidores',
-        router: '/seguidores',
+        page: 'Serviços',
+        router: '/servicos',
         icon: <AddBoxIcon />
-    },
-    {
-        page: 'Curtidas',
-        router: '/curtidas',
-        icon: <ThumbUpIcon />
-    },
-    {
-        page: 'Comentários',
-        router: '/comentarios',
-        icon: <AddCommentIcon />
     },
     {
         page: 'Sobre',

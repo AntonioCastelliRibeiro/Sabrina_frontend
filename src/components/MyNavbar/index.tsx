@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Toolbar, CssBaseline, useScrollTrigger, Slide, useTheme, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { IMyNavbar } from './interface';
+import { IMyNavbar, IPages } from './interface';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AppBarComp, IconButtonMenu, StackComp, TypograpyComp } from './styles';
 import { pages } from './data';
 import { returnBgColor } from "./functions";
 import { MyButton } from '../MyButton/styles';
+import { IPage } from './functions/interface';
 
 export default function MyNavbar(props: IMyNavbar) {
     const theme = useTheme();
@@ -14,14 +15,12 @@ export default function MyNavbar(props: IMyNavbar) {
     const navigate = useNavigate();
     const { window } = props;
     const trigger = useScrollTrigger({ target: window ? window() : undefined, });
-    const [onPage, setPage] = useState({ inicio: false, seguidores: false, curtidas: false, comentarios: false, sobre: false })
+    const [onPage, setPage] = useState<IPage>({ inicio: false, serviços: false, sobre: false })
 
     useEffect(() => {
         setPage({
             inicio: (location.pathname === '/'),
-            seguidores: (location.pathname === '/seguidores'),
-            curtidas: (location.pathname === '/curtidas'),
-            comentarios: (location.pathname === '/comentarios'),
+            serviços: (location.pathname === '/servicos'),
             sobre: (location.pathname === '/sobre'),
 
         });

@@ -16,7 +16,7 @@ export default function FormPrincipal() {
     }, []);
 
     return (
-        <Content bgcolor={theme.palette.primary.dark}>
+        <Content>
             <Container maxWidth="lg">
                 <Stack alignItems="center" spacing={2}>
                     <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
