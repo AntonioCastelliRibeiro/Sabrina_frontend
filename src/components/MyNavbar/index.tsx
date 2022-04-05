@@ -54,7 +54,7 @@ export default function MyNavbar(props: IMyNavbar) {
                                             lg: theme.typography.body1.fontSize, 
                                             xl: theme.typography.body1.fontSize 
                                         } }}
-                                    bgcolorselect={returnBgColor(data.page, onPage)}
+                                    bgcolorselect={returnBgColor(data.page, onPage, theme.palette.primary.light)}
                                     theme={theme}
                                     key={data.page}
                                     onClick={() => handleClick(data.router)}

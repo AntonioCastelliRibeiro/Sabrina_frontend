@@ -6,11 +6,13 @@ export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   overflow: "hidden",
   height: "100%",
+  border: '2px solid transparent',
   "&:hover": {
-    boxShadow: 10
+    boxShadow: theme.shadows[10],
+    border: `2px solid ${theme.palette.primary.light}` ,
   },
-  boxShadow: theme.shadows[5],
-  transition: "0.3s ease"
+  boxShadow: theme.shadows[2],
+  transition: theme.transitions.easing.easeIn
 }));
 
 export const TypographyTitle = styled(Typography)(({ theme }) => ({

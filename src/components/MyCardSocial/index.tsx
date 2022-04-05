@@ -24,8 +24,8 @@ export default function MyCardSocial(props: IProps) {
             pl={{ xs: 0, sm: 2 }}
             width="100%"
           >
-            <TypographyTitle variant="h5" children={props.data.textTitle} />
-            <TypographySubTitle variant="h6" children={props.data.textSubTitle} />
+            <TypographyTitle variant="h6" children={props.data.textTitle} />
+            <TypographySubTitle variant="body1" children={props.data.textSubTitle} />
           </Stack>
         </Stack>
       </CardActionAreaComp>
