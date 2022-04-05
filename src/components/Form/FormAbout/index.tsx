@@ -33,27 +33,25 @@ export default function FormAbout() {
 
                     <TransitionComp {...transition}>
                         <CompDescTop title="Sobre nós" subTitle={data.subTitle} />
-                        {/* <CardActionAreaComp>
-                            <CardMediaComp image={data.imgCapa} />
-                        </CardActionAreaComp> */}
                     </TransitionComp>
 
                     <TransitionComp {...transition}>
                         <Stack spacing={3}>
                             {dataText.map((data, key)=>(
                                 <TypograpySubTitle 
-                                sx={{ fontSize: { 
-                                    xs: theme.typography.body1.fontSize, 
-                                    sm: theme.typography.body1.fontSize, 
-                                    md: theme.typography.h4.fontSize, 
-                                    lg: theme.typography.h5.fontSize, 
-                                    xl: theme.typography.h5.fontSize 
-                                    } 
-                                }}
-                                theme={theme} 
-                                color={theme.palette.secondary.light} 
-                                textAlign="left" 
-                                children={data.text} 
+                                    sx={{ fontSize: { 
+                                        xs: theme.typography.body1.fontSize, 
+                                        sm: theme.typography.body1.fontSize, 
+                                        md: theme.typography.h4.fontSize, 
+                                        lg: theme.typography.h5.fontSize, 
+                                        xl: theme.typography.h5.fontSize 
+                                        } 
+                                    }}
+                                    key={key}
+                                    theme={theme} 
+                                    color={theme.palette.secondary.light} 
+                                    textAlign="left" 
+                                    children={data.text} 
                             />
                             ))}
                         </Stack>                        

@@ -17,6 +17,7 @@ export const CardComp = styled(Card)(({ theme }) => ({
   backgroundColor: 'transparent', 
   height: "600px",
   width: "100%", 
+  borderRadius: 'inherit',
   boxShadow: theme.shadows[2],
   '&:hover': { 
     boxShadow: theme.shadows[5]
@@ -25,13 +26,9 @@ export const CardComp = styled(Card)(({ theme }) => ({
 }));
 
 export const StackContent = styled(Stack)(({ theme })=>({
-    // boxShadow: theme.shadows[5],
     overflow: "hidden",
     borderRadius: "inherit",
     backgroundColor: theme.palette.primary.dark,
-    // "&:hover": { 
-    //     boxShadow: theme.shadows[10] 
-    // },
     transition: theme.transitions.easing.easeIn
 }));
 

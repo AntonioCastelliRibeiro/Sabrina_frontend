@@ -1,5 +1,5 @@
-import CardImage from "../../../MyCardImage";
+import CardInfo from "../../../MyCardInfo";
 
 export default function CompFour(){
-    return <CardImage />
+    return <CardInfo />
 }

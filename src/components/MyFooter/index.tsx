@@ -42,23 +42,25 @@ const Foot = function FootComp() {
                             colorhover={theme.palette.primary.light}
                         />
                         <Stack direction={{ xs: "column", sm: "column", md: "row" }} spacing={{ xs: 1, sm: 1, md: 1 }}>
-                            {pages.map((data) => (
-                                <MyButton
-                                    theme={theme}
-                                    key={data.page}
-                                    onClick={() => handleClick(data.router)}
-                                    bgcolorselect={theme.palette.primary.dark}
-                                    bgcolorhover={theme.palette.secondary.main}
-                                    colortypo={theme.palette.secondary.main}
-                                    colorhover={theme.palette.primary.dark}
-                                    fontweighthover={0}
-                                    myfontweight={0}
-                                    size="small"
-                                    startIcon={data.icon}
-                                    variant="contained"
-                                    children={data.page}
-                                    disableElevation
-                                />
+                            {pages.map((data, key) => (
+                                <Stack key={key}>
+                                    <MyButton
+                                        theme={theme}
+                                        key={data.page}
+                                        onClick={() => handleClick(data.router)}
+                                        bgcolorselect={theme.palette.primary.dark}
+                                        bgcolorhover={theme.palette.secondary.main}
+                                        colortypo={theme.palette.secondary.main}
+                                        colorhover={theme.palette.primary.dark}
+                                        fontweighthover={0}
+                                        myfontweight={0}
+                                        size="small"
+                                        startIcon={data.icon}
+                                        variant="contained"
+                                        children={data.page}
+                                        disableElevation
+                                    />
+                                </Stack>
                             ))}
                         </Stack>
                     </ContentFlexLeftSec>

@@ -18,7 +18,6 @@ export default function CardInfo() {
           <Stack pt={10}>
                 <StackContent
                     spacing={2}
-                    p={{ xs: 2, sm: 4, md: 4, lg: 8, xl: 8 }}
                     direction={{ xs: "column", sm: "column", md: "column", lg: 'row' }}
                 >
                     <Stack justifyContent="center" width="100%">

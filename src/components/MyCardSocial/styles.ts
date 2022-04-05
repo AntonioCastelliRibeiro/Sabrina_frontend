@@ -8,7 +8,7 @@ export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
   height: "100%",
   border: '2px solid transparent',
   "&:hover": {
-    boxShadow: theme.shadows[10],
+    boxShadow: theme.shadows[5],
     border: `2px solid ${theme.palette.primary.light}` ,
   },
   boxShadow: theme.shadows[2],

@@ -23,7 +23,7 @@ export const TransitionComp = styled(motion.div)(() => ({
     flexDirection: "inherit",
     alignItems: "inherit",
     justifyContent: "inherit",
-    padding: "inherit",
+    // padding: "inherit",
     margin: "inherit",
 }));
 

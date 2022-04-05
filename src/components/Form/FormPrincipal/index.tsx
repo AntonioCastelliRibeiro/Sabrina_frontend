@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
-import CompDescTop from "./CompDescTop";
-import { Container, useTheme, Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { Content } from "../FormAbout/styles";
-import { dataDesc } from "./data";
-import CompHoverSec from "./CompHoverSec";
 import CompThird from "./CompThird";
+import CompFirst from "./CompFIrst";
+import CompSec from "./CompSec";
 import CompFour from "./CompFour";
 import CompFive from "./CompFive";
 
 export default function FormPrincipal() {
-    const theme = useTheme();
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -19,12 +16,12 @@ export default function FormPrincipal() {
         <Content>
             <Container maxWidth="lg">
                 <Stack alignItems="center" spacing={2}>
-                    <CompDescTop title={dataDesc.title} subTitle={dataDesc.subTitle} />
-                    <CompHoverSec />
-                    <CompThird />                    
+                    <CompFirst />
+                    <CompSec />                    
                 </Stack>
             </Container>  
             <Stack>
+                <CompThird />
                 <CompFour />
                 <CompFive />
             </Stack>

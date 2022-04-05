@@ -11,7 +11,7 @@ export default function CompDescTop(props: IData) {
         // <ContainerComp theme={theme} maxWidth="lg" >
             <TransitionComp {...transition} >
                 <Content spacing={2}>
-                    <Stack alignItems="center" pb={4} pt={2} spacing={2} >
+                    <Stack alignItems="center" pb={4} pt={0} spacing={2} >
                         <TypograpyTitle 
                             sx={{ 
                                 fontSize: { 

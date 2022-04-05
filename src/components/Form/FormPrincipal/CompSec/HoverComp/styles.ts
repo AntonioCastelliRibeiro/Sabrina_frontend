@@ -1,5 +1,5 @@
-import { CardActionArea, Container, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { CardActionArea, Container, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { ITheme } from "./interface";
 
@@ -37,7 +37,7 @@ export const TransitionComp = styled(motion.div)(({ })=>({
     flexDirection: "inherit",
     alignItems: "inherit",
     justifyContent: "inherit",
-    padding: "inherit",
+    // padding: "inherit",
     margin: "inherit",
 }));
 
@@ -87,7 +87,7 @@ export const CardActionAreaComp = styled(CardActionArea) <ITheme> (({ theme, sel
     color: theme.palette.secondary.main,
     backgroundColor: theme.palette.primary.main,
     border: selected ? `2px solid ${theme.palette.primary.light}` : "2px solid transparent",
-    boxShadow: selected ? theme.shadows[10] : theme.shadows[0],
+    boxShadow: selected ? theme.shadows[5] : theme.shadows[2],
     transition: theme.transitions.easing.easeIn
 }));
 

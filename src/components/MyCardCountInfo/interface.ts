@@ -1,4 +1,4 @@
-export interface IdataCardCountInfo {
+export interface IProps {
     count: number;
     subTitle: string;
 }

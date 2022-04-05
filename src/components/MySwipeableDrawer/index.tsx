@@ -55,28 +55,30 @@ export default function MySwipeableDrawer(props: IMySwipeableDrawer) {
           </ContentPuller>
           <ContentButton theme={theme}  >
             <Stack spacing={1.3} width="100%" >
-              {pages.map((data) => (
-                <MyButton
-                  theme={theme}
-                  sx={{ fontSize: { 
-                    xs: theme.typography.body2.fontSize, 
-                    sm: theme.typography.body1.fontSize, 
-                    md: theme.typography.body1.fontSize, 
-                } }}
-                  key={data.page}
-                  onClick={toggleDrawer(data.router)}
-                  bgcolorselect={theme.palette.primary.dark}
-                  bgcolorhover={theme.palette.secondary.main}
-                  colortypo={theme.palette.secondary.main}
-                  colorhover={theme.palette.primary.dark}
-                  fontweighthover={0}
-                  myfontweight={0}
-                  size="large"
-                  startIcon={data.icon}
-                  variant="contained"
-                  children={data.page}
-                  disableElevation
-                />
+              {pages.map((data, key) => (
+                <Stack key={key}>
+                  <MyButton
+                    theme={theme}
+                    sx={{ fontSize: { 
+                      xs: theme.typography.body2.fontSize, 
+                      sm: theme.typography.body1.fontSize, 
+                      md: theme.typography.body1.fontSize, 
+                  } }}
+                    key={data.page}
+                    onClick={toggleDrawer(data.router)}
+                    bgcolorselect={theme.palette.primary.dark}
+                    bgcolorhover={theme.palette.secondary.main}
+                    colortypo={theme.palette.secondary.main}
+                    colorhover={theme.palette.primary.dark}
+                    fontweighthover={0}
+                    myfontweight={0}
+                    size="large"
+                    startIcon={data.icon}
+                    variant="contained"
+                    children={data.page}
+                    disableElevation
+                  />
+                </Stack>
               ))}
             </Stack>
           </ContentButton>

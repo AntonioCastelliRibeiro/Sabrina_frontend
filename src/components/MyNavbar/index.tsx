@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Toolbar, CssBaseline, useScrollTrigger, Slide, useTheme, Box } from '@mui/material';
+import { Toolbar, CssBaseline, useScrollTrigger, Slide, useTheme, Box, Stack } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IMyNavbar, IPages } from './interface';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -45,26 +45,28 @@ export default function MyNavbar(props: IMyNavbar) {
                             Mundi Seguidores
                         </TypograpyComp>
                         <StackComp theme={theme} direction="row" spacing={1}>
-                            {pages.map((data) => (
-                                <MyButton
-                                    sx={{ fontSize: { 
-                                            xs: theme.typography.body2.fontSize, 
-                                            sm: theme.typography.body2.fontSize, 
-                                            md: theme.typography.body2.fontSize, 
-                                            lg: theme.typography.body1.fontSize, 
-                                            xl: theme.typography.body1.fontSize 
-                                        } }}
-                                    bgcolorselect={returnBgColor(data.page, onPage, theme.palette.primary.light)}
-                                    theme={theme}
-                                    key={data.page}
-                                    onClick={() => handleClick(data.router)}
-                                    children={data.page}
-                                    color="secondary"
-                                    colorhover={theme.palette.secondary.light}
-                                    bgcolorhover={theme.palette.primary.main}
-                                    size="medium"
-                                    startIcon={data.icon}
-                                />
+                            {pages.map((data, key) => (
+                                <Stack key={key}>
+                                    <MyButton
+                                        sx={{ fontSize: { 
+                                                xs: theme.typography.body2.fontSize, 
+                                                sm: theme.typography.body2.fontSize, 
+                                                md: theme.typography.body2.fontSize, 
+                                                lg: theme.typography.body1.fontSize, 
+                                                xl: theme.typography.body1.fontSize 
+                                            } }}
+                                        bgcolorselect={returnBgColor(data.page, onPage, theme.palette.primary.light)}
+                                        theme={theme}
+                                        key={data.page}
+                                        onClick={() => handleClick(data.router)}
+                                        children={data.page}
+                                        color="secondary"
+                                        colorhover={theme.palette.secondary.light}
+                                        bgcolorhover={theme.palette.primary.main}
+                                        size="medium"
+                                        startIcon={data.icon}
+                                    />
+                                </Stack>
                             ))}
                         </StackComp>
                         <IconButtonMenu
