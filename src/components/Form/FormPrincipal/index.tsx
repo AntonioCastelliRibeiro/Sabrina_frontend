@@ -7,6 +7,7 @@ import CompSec from "./CompSec";
 import CompFour from "./CompFour";
 import CompFive from "./CompFive";
 import CompSix from "./CompSix";
+import CompSeven from "./CompSeven";
 
 export default function FormPrincipal() {
     useEffect(() => {
@@ -26,6 +27,7 @@ export default function FormPrincipal() {
                 <CompFour />
                 <CompFive />
                 <CompSix />
+                <CompSeven />
             </Stack>
         </Content>
     )
