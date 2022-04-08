@@ -1,50 +1,19 @@
-import { Star } from "@mui/icons-material";
-import { Box, Paper, Avatar, Stack } from "@mui/material";
+import { Stack, Rating } from "@mui/material";
 import { ICardCarrousel } from "./interface";
-import { TypographyCharge, TypographyName, TypographyTitle } from "./styles";
+import { AvatarComp, Content, ContentSec, TypographyCharge, TypographyName, TypographyTitle } from "./styles";
 
 export default function CardCrSel(props: ICardCarrousel) {
   return (
-    <Box
-      display="flex"
-      justifyContent="space-evenly"
-      flexDirection="column"
-      alignItems="center"
-      sx={{      
-        userSelect: "none",
-        overflow: "hidden",
-        width: "100%",
-        background: "inherit"
-      }}
-      minHeight={"450px"}
-    >
-      <Stack
-        spacing={2}
-        display="flex"
-        justifyContent="space-evenly"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <Paper style={{ borderRadius: "36px" }}>
-          <Avatar
-            style={{ height: 70, width: 70 }}
-            alt="Imagem Opinião de Usuário"
-            src={props.img}
-          />
-        </Paper>
-        <TypographyTitle variant={"h6"} children={props.desc} />
-        <Stack alignItems="center" spacing={0.1}>
-          <TypographyName variant="h6" children={props.name} />
-          <TypographyCharge variant="body2" children={props.charge} />
-          <Stack direction="row">
-            <Star style={{ color: "#ff9800" }} />
-            <Star style={{ color: "#ff9800" }} />
-            <Star style={{ color: "#ff9800" }} />
-            <Star style={{ color: "#ff9800" }} />
-            <Star style={{ color: "#ff9800" }} />
-          </Stack>
+    <Content>
+      <ContentSec spacing={2}>
+        <AvatarComp alt="Imagem Opinião de Usuário" src={props.img}/>
+        <TypographyTitle children={props.desc} />
+        <Stack pb={10} alignItems="center" spacing={0.1}>
+          <TypographyName children={props.name} />
+          <TypographyCharge children={props.charge} />
+          <Rating value={5} readOnly />
         </Stack>
-      </Stack>
-    </Box>
+      </ContentSec>
+    </Content>
   );
 }
