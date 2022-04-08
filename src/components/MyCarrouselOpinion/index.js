@@ -22,7 +22,7 @@ export default function MyCrSelMaterial() {
   return (
     <Carousel
       className="carouselMaterialClass"
-      autoFocus
+      // autoFocus
       onClickItem={() => console.log(onIndex)}
       selectedItem={onIndex}
       onChange={(index) => setOnIndex(index)}
@@ -36,7 +36,7 @@ export default function MyCrSelMaterial() {
       autoPlay={false}
       showArrows
       useKeyboardArrows
-      stopOnHover
+      // stopOnHover
       // centerMode
       // centerSlidePercentage={90}
       // infiniteLoop

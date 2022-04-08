@@ -10,13 +10,13 @@ export default function CardCrSel(props: ICardCarrousel) {
       justifyContent="space-evenly"
       flexDirection="column"
       alignItems="center"
-      style={{
+      sx={{      
         userSelect: "none",
         overflow: "hidden",
         width: "100%",
         background: "inherit"
       }}
-      minHeight={"500px"}
+      minHeight={"450px"}
     >
       <Stack
         spacing={2}
