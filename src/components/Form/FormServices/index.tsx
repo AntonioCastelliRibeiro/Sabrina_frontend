@@ -1,4 +1,5 @@
 import { Container, Grid, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { useEffect } from "react";
 import MyCardSocial from "../../MyCardSocial";
 import { transition } from "../FormAbout/motion";
 import { Content } from "../FormAbout/styles";
@@ -10,6 +11,11 @@ import { TypographyTitle } from "./styles";
 export default function FormServices(){
     const theme = useTheme();
     const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <Content>
             <Container maxWidth="lg" >

@@ -7,6 +7,5 @@ export interface IData {
     textFirst: string;
     textSec: string;
     textThird: string;
-    linkMaps: string;
-    imgCapa: string;
+    imgQuemSomos: string;
 }
