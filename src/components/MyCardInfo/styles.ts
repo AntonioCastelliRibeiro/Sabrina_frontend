@@ -6,9 +6,11 @@ export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
 }));
 
 export const ButtonComp = styled(Button)(({ theme }) => ({
-  boxShadow: theme.shadows[2],
+  boxShadow: theme.shadows[0],
+  border: "2px solid transparent",
   '&:hover': { 
-    boxShadow: theme.shadows[5]
+    boxShadow: theme.shadows[5],
+    border: `2px solid ${theme.palette.primary.light}`,
   },
   transition: theme.transitions.easing.easeIn
 }));

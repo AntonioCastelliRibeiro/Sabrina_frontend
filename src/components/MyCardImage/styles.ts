@@ -2,7 +2,8 @@ import { CardActionArea, Stack, styled, Typography } from "@mui/material";
 
 export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
   borderRadius: "9px",
-  color: "#fff"
+  color: "#fff",
+ 
 }));
 
 export const StackContent = styled(Stack)(({ theme })=>({
@@ -10,10 +11,12 @@ export const StackContent = styled(Stack)(({ theme })=>({
     overflow: "hidden",
     borderRadius: "inherit",
     backgroundColor: theme.palette.primary.main,
+    border: `2px solid transparent`,
     "&:hover": { 
-        boxShadow: theme.shadows[5] 
+        boxShadow: theme.shadows[5],
+        border: `2px solid ${theme.palette.primary.light}`,
     },
-    transition: theme.transitions.easing.easeIn
+    transition: theme.transitions.easing.easeIn,
 }));
 
 export const TypographyTitle = styled(Typography)(({ theme }) => ({

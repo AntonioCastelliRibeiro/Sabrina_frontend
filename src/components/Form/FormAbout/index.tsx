@@ -12,12 +12,12 @@ export default function FormAbout() {
 
     return (
         <Content>
-            <Container maxWidth="lg">
-                <Stack spacing={2} >
-                    <CompFirstAbout />
-                    <CompSecAbout />                   
-                </Stack>
-            </Container>
+            <Stack spacing={4} >
+                <Container maxWidth="lg">
+                        <CompFirstAbout />
+                </Container>
+                <CompSecAbout />  
+            </Stack>
         </Content>
     )
 }

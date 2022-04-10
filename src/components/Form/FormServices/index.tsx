@@ -1,6 +1,7 @@
 import { Container, Grid, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import MyCardSocial from "../../MyCardSocial";
+import CompSecAbout from "../FormAbout/CompSecAbout";
 import { transition } from "../FormAbout/motion";
 import { Content } from "../FormAbout/styles";
 import CompDescTop from "../FormPrincipal/CompDescTop";
@@ -52,9 +53,13 @@ export default function FormServices(){
                                 ))}
                             </Grid>
                         </Stack>
+                        
                     </Stack>
                 </TransitionComp>
             </Container>
+            <Stack pt={7}>
+                <CompSecAbout />
+            </Stack>
         </Content>
     )
 }

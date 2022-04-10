@@ -33,7 +33,7 @@ export const TypographyTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const TypographySubTitle = styled(Typography)(({ theme }) => ({
-    color: theme.palette.secondary.light
+    color: theme.palette.secondary.dark
 }));
 
 export const TypographyDesc = styled(Typography)(({ theme }) => ({
