@@ -3,7 +3,7 @@ import { Avatar, Box, Stack, styled, Typography } from "@mui/material";
 export const TypographyTitle = styled(Typography)(({theme})=>({
     fontWeight: 0,
     color: theme.palette.secondary.light,
-    padding: 56,
+    padding: 0,
     textAlign: "center",
     fontSize: theme.typography.h6.fontSize,
     [theme.breakpoints.down('sm')]: {
@@ -30,14 +30,15 @@ export const TypographyCharge = styled(Typography)(({theme})=>({
 
 export const Content = styled(Box)(({theme})=>({
     display: "flex",
-    justifyContent: "space-evenly",
     flexDirection: "column",
+    justifyContent: "center",
+
     alignItems: "center",
     userSelect: "none",
     overflow: "hidden",
     width: "100%",
     background: "inherit",
-    minHeight: "450px",
+    minHeight: "350px",
     [theme.breakpoints.down('sm')]: {
         minHeight: "100%",
     }
@@ -45,7 +46,6 @@ export const Content = styled(Box)(({theme})=>({
 
 export const ContentSec = styled(Stack)(({theme})=>({
     display: "flex",
-    justifyContent: "space-evenly",
     flexDirection: "column",
     alignItems: "center",
     maxHeight: 'inherit'

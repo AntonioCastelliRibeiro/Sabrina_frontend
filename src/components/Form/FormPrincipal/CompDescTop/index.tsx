@@ -6,42 +6,39 @@ import { IData } from "./interface";
 
 export default function CompDescTop(props: IData) {
     const theme = useTheme();
-
     return (
-        // <ContainerComp theme={theme} maxWidth="lg" >
-            <TransitionComp {...transition} >
-                <Content spacing={2}>
-                    <Stack alignItems="center" pb={4} pt={0} spacing={2} >
-                        <TypograpyTitle 
-                            sx={{ 
-                                fontSize: { 
-                                    xs: theme.typography.h4.fontSize, 
-                                    sm: theme.typography.h4.fontSize, 
-                                    md: theme.typography.h3.fontSize, 
-                                    lg: theme.typography.h3.fontSize, 
-                                    xl: theme.typography.h3.fontSize 
-                                    } 
-                                }}
+        <TransitionComp {...transition} >
+            <Content spacing={2}>
+                <Stack alignItems="center" pb={4} pt={0} spacing={2} >
+                    <TypograpyTitle 
+                        sx={{ 
+                            fontSize: { 
+                                xs: theme.typography.h4.fontSize, 
+                                sm: theme.typography.h4.fontSize, 
+                                md: theme.typography.h3.fontSize, 
+                                lg: theme.typography.h3.fontSize, 
+                                xl: theme.typography.h3.fontSize 
+                                } 
+                            }}
+                        theme={theme} 
+                        children={props.title} 
+                    />
+                    <ContainerComp theme={theme} maxWidth="sm" >
+                        <TypograpySubTitle 
+                            sx={{ fontSize: { 
+                                xs: theme.typography.h6.fontSize, 
+                                sm: theme.typography.h6.fontSize, 
+                                md: theme.typography.h6.fontSize, 
+                                lg: theme.typography.h6.fontSize, 
+                                xl: theme.typography.h6.fontSize 
+                                } 
+                            }} 
                             theme={theme} 
-                            children={props.title} 
+                            children={props.subTitle} 
                         />
-                        <ContainerComp theme={theme} maxWidth="sm" >
-                            <TypograpySubTitle 
-                                sx={{ fontSize: { 
-                                    xs: theme.typography.h6.fontSize, 
-                                    sm: theme.typography.h6.fontSize, 
-                                    md: theme.typography.h6.fontSize, 
-                                    lg: theme.typography.h6.fontSize, 
-                                    xl: theme.typography.h6.fontSize 
-                                    } 
-                                }} 
-                                theme={theme} 
-                                children={props.subTitle} 
-                            />
-                        </ContainerComp>
-                    </Stack>
-                </Content>
-            </TransitionComp>
-        // </ContainerComp>
+                    </ContainerComp>
+                </Stack>
+            </Content>
+        </TransitionComp>
     )
 }

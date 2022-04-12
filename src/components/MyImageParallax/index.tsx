@@ -6,7 +6,7 @@ import { IPropsMyImageParallax } from "./interface";
 export default function MyImageParallax(props: IPropsMyImageParallax){
     return (
         <Stack height={"inherit"}>
-            <Parallax bgImageStyle={{opacity: .95}} style={{ height: "inherit" }} bgImage={props.image} strength={200}>
+            <Parallax bgImageStyle={{ opacity: .70 }} style={{ height: "inherit", borderRadius: "9px" }} bgImage={props.image} strength={300}>
                 {props.children}
             </Parallax>
         </Stack>

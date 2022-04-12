@@ -23,7 +23,6 @@ export default function MyCrSelMaterial() {
     <Carousel
       className="carouselMaterialClass"
       // autoFocus
-      onClickItem={() => console.log(onIndex)}
       selectedItem={onIndex}
       onChange={(index) => setOnIndex(index)}
       emulateTouch
@@ -43,7 +42,7 @@ export default function MyCrSelMaterial() {
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
           <IconButton
-            type="button"
+            size="small"
             onClick={onClickHandler}
             title={label}
             style={{ ...arrowStyles, left: 15 }}
@@ -55,7 +54,7 @@ export default function MyCrSelMaterial() {
       renderArrowNext={(onClickHandler, hasNext, label) =>
         hasNext && (
           <IconButton
-            type="button"
+            size="small"
             onClick={onClickHandler}
             title={label}
             style={{ ...arrowStyles, right: 15 }}

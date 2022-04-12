@@ -19,7 +19,7 @@ export default function FormServices(){
     
     return (
         <Content>
-            <Container maxWidth="lg" >
+            <Container maxWidth="lg" sx={{ pb: 10 }} >
                 <TransitionComp {...transition}>
                     <CompDescTop title="Nossos Serviços" subTitle={"Trabalhamos com as seguintes plataformas e serviços:"} />
                     <Stack spacing={7}>
@@ -57,7 +57,7 @@ export default function FormServices(){
                     </Stack>
                 </TransitionComp>
             </Container>
-            <Stack pt={7}>
+            <Stack>
                 <CompSecAbout />
             </Stack>
         </Content>

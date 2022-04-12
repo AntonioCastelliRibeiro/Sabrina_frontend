@@ -13,20 +13,22 @@ export default function CompSecAbout(){
     const isSm = useMediaQuery(theme.breakpoints.down("sm"));
     return (
         <Box height="100%">
-            <MyImageParallax image={imgParallax}>
-                <Container maxWidth="lg" sx={{ padding: 20, [theme.breakpoints.down('md')] : {padding: 2}}}>
-                    <TransitionComp {...transition}>
-                        <CompDescTop title="Dúvidas Frequentes" subTitle="Alguma das dúvidas que as pessoas tem referente aos nossos serviços" />
-                        <Grid spacing={isSm ? 0 : 2} container sx={{ margin: 0, pr: isSm ? 0 : "30px" }}>
-                            {dataCompSecAbout.map((data, key) => (
-                                <Grid key={key} pt={isSm ? 2 : 0} item xs={12} sm={12} md={4} lg={4} xl={4}>
-                                    <AccordionBoubt title={data.title} desc={data.desc} />
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </TransitionComp> 
-                </Container>
-            </MyImageParallax>
+            <Container maxWidth="lg">
+                <MyImageParallax image={imgParallax}>
+                    <Container maxWidth="lg" sx={{ padding: 20, [theme.breakpoints.down('md')] : {padding: 2}}}>
+                        <TransitionComp {...transition}>
+                            <CompDescTop title="Dúvidas Frequentes" subTitle="Alguma das dúvidas que as pessoas tem referente aos nossos serviços" />
+                            <Grid spacing={isSm ? 0 : 2} container sx={{ margin: 0, pr: isSm ? 0 : "30px" }}>
+                                {dataCompSecAbout.map((data, key) => (
+                                    <Grid key={key} pt={isSm ? 2 : 0} item xs={12} sm={12} md={4} lg={4} xl={4}>
+                                        <AccordionBoubt title={data.title} desc={data.desc} />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </TransitionComp> 
+                    </Container>
+                </MyImageParallax>
+            </Container>
         </Box>
     )
 }
