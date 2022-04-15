@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { IconButton, Stack } from "@mui/material";
+import { IconButton , Stack, useMediaQuery, useTheme } from "@mui/material";
 import "./styles.css";
-// import CardCrSel from "./CardCarrousel";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowLeft";
-import { dataCrselOpinion } from "./data";
-import MyCardOpinion from "../MyCardOpinion";
-
+import MyCardHoverOpacity from "../MyCardHoverOpacity";
+import { dataMyCarrouselHover } from "./data";
 // touchAction: 'pan-y'
 
-const arrowStyles = {
+const arrowStyles: CSSProperties = {
   position: "absolute",
   zIndex: 2,
   top: "calc(50% - 15px)",
@@ -18,28 +16,35 @@ const arrowStyles = {
   color: "#fff"
 };
 
-export default function MyCrSelMaterial() {
-  const [onIndex, setOnIndex] = useState(0);
+export default function MyCarrouselHover() {
+    const theme = useTheme();
+    const isMd = useMediaQuery(theme.breakpoints.down('lg'));
+    const [onIndex, setOnIndex] = useState(0);
+
+    useEffect(()=>{
+        setOnIndex(onIndex+1);
+    }, [isMd])
+  
   return (
     <Carousel
-      className="carouselMaterialClass"
-      // autoFocus
+      className="carouselMaterialClass1"
+    //   autoFocus
+      onClickItem={() => console.log(onIndex)}
       selectedItem={onIndex}
-      onChange={(index) => setOnIndex(index)}
-      emulateTouch
-      showIndicators
+      onChange={(index, intem) => setOnIndex(index)}
+    //   emulateTouch
+      showIndicators={false}
       infiniteLoop
       // dynamicHeight
       showThumbs={false}
       showStatus={false}
-      swipeable
-      autoPlay={false}
-      showArrows
+    //   swipeable
+      autoPlay={true}
+      showArrows={true}
       useKeyboardArrows
-      // stopOnHover
-      // centerMode
-      // centerSlidePercentage={90}
-      // infiniteLoop
+      stopOnHover
+      centerMode
+      centerSlidePercentage={isMd ? 100 : 27}
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
           <IconButton
@@ -70,12 +75,13 @@ export default function MyCrSelMaterial() {
           </IconButton>
         )
       }
+      
     >
-      {dataCrselOpinion.map((data, key)=>(
-        <Stack key={key}>
-          <MyCardOpinion {...data} />
-        </Stack>
-      ))}
+        {dataMyCarrouselHover.map((data, key)=>(
+            <Stack key={key}>
+                <MyCardHoverOpacity {...data} />
+            </Stack>
+        ))}
     </Carousel>
   );
 }

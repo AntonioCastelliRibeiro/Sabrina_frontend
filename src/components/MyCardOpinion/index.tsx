@@ -2,7 +2,7 @@ import { Stack, Rating } from "@mui/material";
 import { ICardCarrousel } from "./interface";
 import { AvatarComp, Content, ContentSec, TypographyCharge, TypographyName, TypographyTitle } from "./styles";
 
-export default function CardCrSel(props: ICardCarrousel) {
+export default function MyCardOpinion(props: ICardCarrousel) {
   return (
     <Content>
       <ContentSec spacing={2}>
