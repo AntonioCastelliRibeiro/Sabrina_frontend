@@ -10,19 +10,17 @@ export const ContentDesc = styled(Stack)(({ theme }) => ({
   }));
   
 export const CardComp = styled("div")(({ theme }) => ({
-    overflow: "hidden",
     height: "300px",
     width: "100%",
     filter: "grayscale(100%)",
-    border: "0px solid transparent",
     zIndex: 100,    
     "&:hover": {
       filter: "grayscale(0%)"
     },
-    transition: "ease 0.1s",
     [theme.breakpoints.down('lg')]: {
       filter: "grayscale(0%)",
-    }
+    },
+    transition: "ease 0.1s",
   }));
   
 export const CardMediaComp = styled(CardMedia)(({ theme }) => ({

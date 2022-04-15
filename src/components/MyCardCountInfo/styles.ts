@@ -3,15 +3,17 @@ import { CardActionArea, styled, Typography } from "@mui/material";
 export const CountComp = styled(Typography)(({ theme }) => ({
     fontColor: "black",
     fontWeight: "bold",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: theme.typography.h4.fontSize
+    fontSize: theme.typography.h5.fontSize,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: theme.typography.h5.fontSize
     }
 }));
   
 export const TitleComp = styled(Typography)(({ theme }) => ({
     fontColor: "black",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: theme.typography.h5.fontSize
+    fontSize: theme.typography.h5.fontSize,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: theme.typography.h6.fontSize
     }
 }));
 

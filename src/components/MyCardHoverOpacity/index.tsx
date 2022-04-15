@@ -14,7 +14,6 @@ export default function MyCardHoverOpacity(props: IPropsMyCardHoverOpacity) {
       height="100%"
       alignItems="center"
       justifyContent="center"
-      overflow="hidden"
     >
       <CardComp>
         <CardMediaComp image={props.img} />

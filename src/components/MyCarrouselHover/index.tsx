@@ -28,7 +28,6 @@ export default function MyCarrouselHover() {
     <Carousel
       className="carouselMaterialClass1"
     //   autoFocus
-      onClickItem={() => console.log(onIndex)}
       selectedItem={onIndex}
       onChange={(index, intem) => setOnIndex(index)}
     //   emulateTouch
@@ -74,10 +73,9 @@ export default function MyCarrouselHover() {
           </IconButton>
         )
       }
-      
     >
         {dataMyCarrouselHover.map((data, key)=>(
-            <Stack key={key}>
+            <Stack pl={1} pr={1} key={key}>
                 <MyCardHoverOpacity {...data} />
             </Stack>
         ))}
