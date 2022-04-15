@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material';
 import { IPage } from './interface';
 
 export function returnBgColor(APage: string, onPage: IPage, ABgColor: string): string {      

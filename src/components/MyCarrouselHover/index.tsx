@@ -13,7 +13,6 @@ const arrowStyles: CSSProperties = {
   zIndex: 2,
   top: "calc(50% - 15px)",
   cursor: "pointer",
-  color: "#fff"
 };
 
 export default function MyCarrouselHover() {
@@ -51,7 +50,7 @@ export default function MyCarrouselHover() {
             size="small"
             onClick={onClickHandler}
             title={label}
-            style={{ ...arrowStyles, left: 0 }}
+            style={{ ...arrowStyles, left: 0, color: theme.palette.primary.light }}
           >
             <ArrowBackIosIcon sx={{ height: 40, width: 40 }} />
           </IconButton>
@@ -63,7 +62,7 @@ export default function MyCarrouselHover() {
             size="small"
             onClick={onClickHandler}
             title={label}
-            style={{ ...arrowStyles, right: 0 }}
+            style={{ ...arrowStyles, right: 0, color: theme.palette.primary.light }}
           >
             <ArrowBackIosIcon
               sx={{

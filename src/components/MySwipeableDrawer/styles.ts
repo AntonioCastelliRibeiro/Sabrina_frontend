@@ -1,4 +1,4 @@
-import { Box, Container, Theme } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import styled from "styled-components";
 import { IContentPuller, ITheme } from "./interface";
 

@@ -1,11 +1,10 @@
-import { Container, Stack, Avatar } from "@mui/material";
+import { Stack, Avatar } from "@mui/material";
 import {
   CardActionAreaComp,
   TypographyTitle,
   TypographySubTitle,
   StackAvatar
 } from "./styles";
-import { data } from "./data";
 import { IProps } from "./interface";
 
 export default function MyCardSocial(props: IProps) {

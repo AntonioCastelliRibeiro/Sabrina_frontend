@@ -8,7 +8,7 @@ export default function MyCardOpinion(props: ICardCarrousel) {
       <ContentSec spacing={2}>
         <AvatarComp alt="Imagem Opinião de Usuário" src={props.img}/>
         <TypographyTitle children={props.desc} />
-        <Stack pb={10} alignItems="center" spacing={0.1}>
+        <Stack pb={5} alignItems="center" spacing={0.1}>
           <TypographyName children={props.name} />
           <TypographyCharge children={props.charge} />
           <Rating value={5} readOnly />

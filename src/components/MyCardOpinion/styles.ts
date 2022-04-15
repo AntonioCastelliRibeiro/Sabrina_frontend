@@ -7,13 +7,13 @@ export const TypographyTitle = styled(Typography)(({theme})=>({
     textAlign: "center",
     fontSize: theme.typography.h6.fontSize,
     [theme.breakpoints.down('sm')]: {
-        fontSize: theme.typography.h6.fontSize
+        fontSize: theme.typography.body1.fontSize
     }
 }));
 
 export const TypographyName = styled(Typography)(({theme})=>({
     color: theme.palette.secondary.main,
-    fontSize: theme.typography.h5.fontSize,
+    fontSize: theme.typography.h6.fontSize,
     [theme.breakpoints.down('sm')]: {
         fontSize: theme.typography.body1.fontSize
     }
@@ -32,13 +32,12 @@ export const Content = styled(Box)(({theme})=>({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-
-    alignItems: "center",
     userSelect: "none",
+    alignItems: "center",    
     overflow: "hidden",
     width: "100%",
     background: "inherit",
-    minHeight: "350px",
+    minHeight: "300px",
     [theme.breakpoints.down('sm')]: {
         minHeight: "100%",
     }
@@ -48,7 +47,10 @@ export const ContentSec = styled(Stack)(({theme})=>({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    maxHeight: 'inherit'
+    maxHeight: 'inherit',
+    userSelect: "none",
+    paddingRight: 30,
+    paddingLeft: 30
 }));
 
 export const AvatarComp = styled(Avatar)(({theme})=>({

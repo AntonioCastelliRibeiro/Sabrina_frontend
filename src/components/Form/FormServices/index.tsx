@@ -1,4 +1,4 @@
-import { Container, Grid, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Container, Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import MyCardSocial from "../../MyCardSocial";
 import CompSecAbout from "../FormAbout/CompSecAbout";

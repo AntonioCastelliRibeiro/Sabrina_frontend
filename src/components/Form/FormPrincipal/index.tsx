@@ -8,7 +8,6 @@ import CompFour from "./CompFour";
 import CompFive from "./CompFive";
 import CompSix from "./CompSix";
 import CompSeven from "./CompSeven";
-import MyCarrouselHover from "../../MyCarrouselHover";
 
 export default function FormPrincipal() {
     useEffect(() => {

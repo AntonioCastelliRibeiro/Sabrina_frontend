@@ -1,24 +1,26 @@
 import {
     Stack,
-    Typography
+    Typography,
+    useTheme
   } from "@mui/material";
 
 import { IPropsMyCardHoverOpacity } from "./interface";
 import { CardComp, CardMediaComp, ContentDesc } from "./styles";
 
 export default function MyCardHoverOpacity(props: IPropsMyCardHoverOpacity) {
+  const theme = useTheme();
   return (
     <Stack
-      pl={2}
       height="100%"
       alignItems="center"
       justifyContent="center"
+      overflow="hidden"
     >
       <CardComp>
         <CardMediaComp image={props.img} />
         <ContentDesc>
           <Stack
-            sx={{ backgroundColor: "#ffffff36" }}
+            sx={{ backgroundColor: "#ffffff3d" }}
             alignItems="center"
             justifyContent="center"
             width="100%"
@@ -26,8 +28,8 @@ export default function MyCardHoverOpacity(props: IPropsMyCardHoverOpacity) {
           >
             <Typography
               variant="h3"
-              color="#fff"
-              fontWeight="bold"
+              color={theme.palette.secondary.light}
+              fontWeight="800"
               children={props.text}
             />
           </Stack>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Toolbar, CssBaseline, useScrollTrigger, Slide, useTheme, Box, Stack } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { IMyNavbar, IPages } from './interface';
+import { IMyNavbar } from './interface';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AppBarComp, IconButtonMenu, StackComp, TypograpyComp } from './styles';
 import { pages } from './data';
