@@ -13,7 +13,8 @@ export const CardComp = styled("div")(({ theme }) => ({
     height: "400px",
     width: "100%",
     filter: "grayscale(100%)",
-    zIndex: 100,    
+    zIndex: 100,   
+    overflow: "hidden", 
     "&:hover": {
       filter: "grayscale(0%)"
     },
@@ -27,6 +28,5 @@ export const CardMediaComp = styled(CardMedia)(({ theme }) => ({
     height: 400,
     width: "100%",
     filter: "inherit",
-    borderRadius: 9
 
   }));
