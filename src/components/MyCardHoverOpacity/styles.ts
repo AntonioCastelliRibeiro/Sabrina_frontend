@@ -10,7 +10,7 @@ export const ContentDesc = styled(Stack)(({ theme }) => ({
   }));
   
 export const CardComp = styled("div")(({ theme }) => ({
-    height: "300px",
+    height: "400px",
     width: "100%",
     filter: "grayscale(100%)",
     zIndex: 100,    
@@ -24,7 +24,9 @@ export const CardComp = styled("div")(({ theme }) => ({
   }));
   
 export const CardMediaComp = styled(CardMedia)(({ theme }) => ({
-    height: 300,
+    height: 400,
     width: "100%",
     filter: "inherit",
+    borderRadius: 9
+
   }));

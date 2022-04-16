@@ -5,15 +5,16 @@ import CompDescTop from "../../FormPrincipal/CompDescTop";
 import { TransitionComp } from "../../FormPrincipal/CompDescTop/styles";
 import { transition } from "../motion";
 import { dataCompSecAbout } from "./data";
+import { ICompSecAbout } from "./interface";
 
 const imgParallax = "https://images.unsplash.com/photo-1636574879131-5f3cd5c8a8e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1339&q=80";
 
-export default function CompSecAbout(){
+export default function CompSecAbout(props: ICompSecAbout){
     const theme = useTheme();
     const isSm = useMediaQuery(theme.breakpoints.down("sm"));
     return (
         <Box height="100%">
-            <Container maxWidth="lg">
+            <Container maxWidth={props.maxwidth || "lg"}>
                 <MyImageParallax image={imgParallax}>
                     <Container maxWidth="lg" sx={{ padding: 20, [theme.breakpoints.down('md')] : {padding: 2}}}>
                         <TransitionComp {...transition}>

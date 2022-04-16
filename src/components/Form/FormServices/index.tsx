@@ -6,6 +6,7 @@ import { transition } from "../FormAbout/motion";
 import { Content } from "../FormAbout/styles";
 import CompDescTop from "../FormPrincipal/CompDescTop";
 import { TransitionComp } from "../FormPrincipal/CompDescTop/styles";
+import CompSix from "../FormPrincipal/CompSix";
 import { dataFace, dataInsta, dataTikTok, dataTitle } from "./data";
 import { TypographyTitle } from "./styles";
 
@@ -19,7 +20,7 @@ export default function FormServices(){
     
     return (
         <Content>
-            <Container maxWidth="lg" sx={{ pb: 10 }} >
+            <Container maxWidth="lg" >
                 <TransitionComp {...transition}>
                     <CompDescTop title="Nossos Serviços" subTitle={"Trabalhamos com as seguintes plataformas e serviços:"} />
                     <Stack spacing={7}>
@@ -58,7 +59,10 @@ export default function FormServices(){
                 </TransitionComp>
             </Container>
             <Stack>
-                <CompSecAbout />
+                <CompSix />
+                <Stack pt={10}>
+                    <CompSecAbout maxwidth="xl" />
+                </Stack>
             </Stack>
         </Content>
     )

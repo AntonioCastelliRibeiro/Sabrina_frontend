@@ -27,7 +27,7 @@ export default function CompSix(){
     const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Container maxWidth="xl"sx={{pt: 10}}>
-            <CompDescTop title="Como conseguir seguidores"  subTitle="Siga os passos para conseguir seguidores"/>
+            <CompDescTop title="Como contratar nossos serviços?"  subTitle="Siga os passos abaixo"/>
             <Grid container spacing={isDownMd ? 0 : 2} style={{ margin: 0, width: "100%" }}>
                 {data.map((data, key) => (
                     <Grid
