@@ -1,4 +1,5 @@
 import { Container, Stack } from "@mui/material";
+import { useEffect } from "react";
 import MyCarrouselHover from "../../../MyCarrouselHover";
 import CompDescTop from "../CompDescTop";
 
