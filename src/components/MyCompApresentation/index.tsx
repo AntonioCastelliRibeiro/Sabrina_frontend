@@ -1,11 +1,11 @@
-import { Container, Stack } from "@mui/material";
-import igprogress from "../../img/igprogress.png";
+import { Stack } from "@mui/material";
 import {
   TypographyDesc,
   TypographyTitle,
   TypographySubDesc,
   ImageComp,
-  ContentImage
+  ContentImage,
+  ImgFrame
 } from "./styles";
 import { data } from "./data";
 
@@ -19,6 +19,7 @@ export default function MyCompApresentation() {
       </Stack>
       <ContentImage>
         <ImageComp src={data.img} />
+        <Stack width="100%" justifyContent="end" alignItems="end" children={<ImgFrame src={data.imgIcon} />} />
       </ContentImage>
     </Stack>
   );

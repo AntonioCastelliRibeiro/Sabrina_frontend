@@ -1,4 +1,4 @@
-import { Stack, styled, Typography } from "@mui/material";
+import { Stack, styled, Typography, keyframes } from "@mui/material";
 
 export const TypographyTitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.light,
@@ -69,3 +69,22 @@ export const ImageComp = styled("img")(({ theme }) => ({
     maxWidth: "550px"
   }
 }));
+
+const scaleKeyFrame = keyframes`
+  0%   {transform: scale(1)}
+  25%  {transform: scale(1.1)}
+  50%  {transform: scale(1.1)}
+  75%  {transform: scale(1.1)}
+  100% {transform: scale(1)}
+`;
+
+export const ImgFrame = styled("img")(({ theme }) => ({
+  height: "80px",
+  width: "80px",
+  position: "absolute",
+  animation: `${scaleKeyFrame} 2.0s ease-in-out`,
+  // transform: "translate(-260px, 0)",
+  animationIterationCount: "infinite",
+  zIndex: "2"
+}));
+
