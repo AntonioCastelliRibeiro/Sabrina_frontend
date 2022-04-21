@@ -7,7 +7,8 @@ import {
   TypographyDescMd,
   Content,
   CardActionAreaComp,
-  ContentDesc
+  ContentDesc,
+  ContentImage
 } from "./styles";
 import { dataMyCardImageDesc } from "./data";
 
@@ -24,11 +25,11 @@ export default function MyCardImageDesc() {
           <TypographyTitle children={dataMyCardImageDesc.title} />
           <TypographyDesc children={dataMyCardImageDesc.descBot} />
         </ContentDesc>
-        <Stack width="50%">
+        <ContentImage>
           <CardActionAreaComp>
             <CardMediaComp image={dataMyCardImageDesc.img} />
           </CardActionAreaComp>
-        </Stack>
+        </ContentImage>
       </Content>
       <TypographyDescMd children={dataMyCardImageDesc.descBot} />
     </Stack>

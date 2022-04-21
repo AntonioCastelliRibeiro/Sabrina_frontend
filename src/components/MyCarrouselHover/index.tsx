@@ -22,6 +22,7 @@ export default function MyCarrouselHover() {
 
     useEffect(()=>{
         setOnIndex(onIndex+1);
+        setOnIndex(onIndex-1);
     }, [isMd])
   
   return (

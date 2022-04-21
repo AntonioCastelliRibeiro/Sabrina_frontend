@@ -19,6 +19,10 @@ import {
     }
   }));
   
+  export const ContentImage = styled(Stack)(({ theme }) => ({
+    width: "50%",
+  }));
+  
   export const CardActionAreaComp = styled(CardActionArea)(({ theme }) => ({
     borderTopLeftRadius: 9,
     borderTopRightRadius: 9,
@@ -27,16 +31,17 @@ import {
     color: "#fff",
     [theme.breakpoints.up("xs")]: {
       height: "50vw",
-      maxWidth: "100%"
+      maxWidth: "100%",
     },
     [theme.breakpoints.up("sm")]: {
       height: "35vh",
-      maxWidth: "100%"
+      maxWidth: "100%",
     },
     [theme.breakpoints.up("md")]: {
       height: 350,
-      maxWidth: 350
-    }
+      maxWidth: 350,
+    },
+    transition: theme.transitions.easing.easeIn
   }));
   
   export const CardMediaComp = styled(CardMedia)(({ theme }) => ({
@@ -50,7 +55,7 @@ import {
   
   export const ContentDesc = styled(Stack)(({ theme }) => ({
     width: "100%",
-    
+    justifyContent: "space-evenly"
   }));
   
   export const TypographyDescTop = styled(Typography)(({ theme }) => ({
@@ -88,7 +93,7 @@ import {
     transition: "ease .3s",
     [theme.breakpoints.up("xs")]: {
       opacity: 0,
-      fontSize: "0px"
+      fontSize: "0px",      
     },
     [theme.breakpoints.up("sm")]: {
       opacity: 0,
@@ -105,11 +110,7 @@ import {
     fontWeight: 500,
     transition: "ease .3s",
     [theme.breakpoints.up("xs")]: {
-      fontSize: theme.typography.h6.fontSize,
-      opacity: 1
-    },
-    [theme.breakpoints.up("sm")]: {
-      fontSize: theme.typography.h6.fontSize,
+      fontSize: theme.typography.body1.fontSize,
       opacity: 1
     },
     [theme.breakpoints.up("md")]: {

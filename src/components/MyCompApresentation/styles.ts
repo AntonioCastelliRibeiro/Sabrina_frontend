@@ -4,7 +4,7 @@ export const TypographyTitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.light,
   fontWeight: "bold",
   [theme.breakpoints.up("xs")]: {
-    fontSize: theme.typography.h4.fontSize
+    fontSize: theme.typography.h5.fontSize
   },
   [theme.breakpoints.up("sm")]: {
     fontSize: theme.typography.h4.fontSize
@@ -13,32 +13,27 @@ export const TypographyTitle = styled(Typography)(({ theme }) => ({
     fontSize: theme.typography.h4.fontSize
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: theme.typography.h2.fontSize
+    fontSize: theme.typography.h3.fontSize
   }
 }));
 
 export const TypographyDesc = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.light,
+  [theme.breakpoints.up("xs")]: {
+    fontSize: theme.typography.body1.fontSize
+  },
   [theme.breakpoints.up("sm")]: {
     fontSize: theme.typography.h6.fontSize
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: theme.typography.h6.fontSize
-  },
-  [theme.breakpoints.up("lg")]: {
-    fontSize: theme.typography.h6.fontSize
-  }
+  },  
+
 }));
 
 export const TypographySubDesc = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.light,
+  [theme.breakpoints.up("xs")]: {
+    fontSize: theme.typography.body1.fontSize
+  },
   [theme.breakpoints.up("sm")]: {
-    fontSize: theme.typography.h6.fontSize
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: theme.typography.h6.fontSize
-  },
-  [theme.breakpoints.up("lg")]: {
     fontSize: theme.typography.h6.fontSize
   }
 }));

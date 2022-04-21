@@ -1,4 +1,5 @@
 .carouselMaterialClass1 {
   background-color: transparent;
   overflow: hidden;
+  border-radius: 9px;    
 }

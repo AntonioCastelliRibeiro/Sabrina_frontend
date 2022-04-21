@@ -28,5 +28,5 @@ export const CardMediaComp = styled(CardMedia)(({ theme }) => ({
     height: 400,
     width: "100%",
     filter: "inherit",
-
+    borderRadius: 9
   }));

@@ -1,6 +1,6 @@
 import { IPage } from './interface';
 
-export function returnBgColor(APage: string, onPage: IPage, ABgColor: string): string {      
+export function returnBgColor(APage: string, onPage: IPage, ABgColor: string, ABgColorNoSelect?: string): string {      
           
         if ((APage === 'Início') && (onPage.inicio)) {
                 return ABgColor;
@@ -10,6 +10,6 @@ export function returnBgColor(APage: string, onPage: IPage, ABgColor: string): s
                 return ABgColor
         } 
         else {
-                return ''
+                return ABgColorNoSelect || ''
         }
 }

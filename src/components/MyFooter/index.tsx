@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Box,
     IconButton,
@@ -10,16 +10,28 @@ import {
 } from "@mui/material";
 
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Content, ContentFlexLeft, ContentFlexLeftSec, ContentIcon, ContentLeft } from "./styles";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { MyButton } from "../MyButton/styles";
 import { pages } from "../MyNavbar/data";
+import { IPage } from "../MyNavbar/functions/interface";
+import { returnBgColor } from "../MyNavbar/functions";
 
 const Foot = function FootComp() {
     const navigate = useNavigate();
     const theme = useTheme();
     const bkpmd = theme.breakpoints.down('md');
+    const location = useLocation();
+    const [onPage, setPage] = useState<IPage>({ inicio: false, serviços: false, sobre: false })
+
+    useEffect(() => {
+        setPage({
+            inicio: (location.pathname === '/'),
+            serviços: (location.pathname === '/servicos'),
+            sobre: (location.pathname === '/sobre'),
+       });
+    }, [location.pathname]);  
 
     const handleClick = (APath: string) => {
         setTimeout(() => {
@@ -47,7 +59,7 @@ const Foot = function FootComp() {
                                         theme={theme}
                                         key={data.page}
                                         onClick={() => handleClick(data.router)}
-                                        bgcolorselect={theme.palette.primary.dark}
+                                        bgcolorselect={returnBgColor(data.page, onPage, theme.palette.primary.main, theme.palette.primary.dark)}
                                         bgcolorhover={theme.palette.secondary.main}
                                         colortypo={theme.palette.secondary.main}
                                         colorhover={theme.palette.primary.dark}
