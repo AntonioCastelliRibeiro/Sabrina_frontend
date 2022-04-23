@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import { styled }  from '@mui/system';
+import { Button, styled } from "@mui/material";
 import { IMyButton } from "./interface";
 
 export const MyButton = styled(Button)<IMyButton>(({ theme, bgcolorselect, colortypo, myfontweight, bgcolorhover, colorhover, fontweighthover }) => ({
@@ -20,7 +19,7 @@ export const MyButton = styled(Button)<IMyButton>(({ theme, bgcolorselect, color
         color: colorhover,
         fontWeight: fontweighthover || 0,
     },
-
+    transition: theme.transitions.easing.easeIn
 }));
 
 // export const MyButton = styled(Button)<IMyButton>`

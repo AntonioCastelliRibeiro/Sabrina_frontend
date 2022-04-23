@@ -1,5 +1,6 @@
 import { Container, Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect } from "react";
+import MyCardColorInfo from "../../MyCardColorInfo";
 import MyCardSocial from "../../MyCardSocial";
 import CompSecAbout from "../FormAbout/CompSecAbout";
 import { transition } from "../FormAbout/motion";
@@ -60,6 +61,7 @@ export default function FormServices(){
             </Container>
             <Stack>
                 <CompSix />
+                <MyCardColorInfo />
                 <Stack pt={10}>
                     <CompSecAbout maxwidth="xl" />
                 </Stack>
