@@ -16,7 +16,7 @@ export default function CompSecAbout(props: ICompSecAbout){
         <Box height="100%">
             <Container maxWidth={props.maxwidth || "lg"}>
                 <MyImageParallax image={imgParallax}>
-                    <Container maxWidth="lg" sx={{ padding: 20, [theme.breakpoints.down('md')] : {padding: 2}}}>
+                    <Container maxWidth="lg" sx={{ padding: 20, borderRadius: "9px", [theme.breakpoints.down('md')] : {padding: 2}}}>
                         <TransitionComp {...transition}>
                             <CompDescTop title="Dúvidas Frequentes" subTitle="Alguma das dúvidas que as pessoas tem referente aos nossos serviços" />
                             <Grid spacing={isSm ? 0 : 2} container sx={{ margin: 0, pr: isSm ? 0 : "30px" }}>
