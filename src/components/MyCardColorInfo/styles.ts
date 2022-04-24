@@ -14,7 +14,7 @@ export const Content = styled(Stack)<IContent>(({ theme, img }) => ({
   textAlign: "center",
   boxShadow: theme.shadows[2],
   border: "2px solid transparent",
-  backgroundColor: "#6a1b9a",
+  backgroundColor: theme.palette.primary.main,
   backgroundImage: `url(${img})`,
   backgroundSize: "cover",
   backgroundPosition: "center",

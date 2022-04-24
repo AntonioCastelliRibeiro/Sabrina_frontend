@@ -10,7 +10,7 @@ export default function MyCardColorInfo() {
   return (
     <Container sx={{ pt: 10 }} maxWidth="xl">
       <Content p={2} spacing={5} img={dataCardColorInfo.img}>
-        <Stack p={1} bgcolor="#6a1b9a" borderRadius={"9px"}>
+        <Stack p={1} bgcolor="#6a1b9ae0" borderRadius={"9px"}>
           <TypograpyTitle children={dataCardColorInfo.title} />
         </Stack>
         <Stack pl={2} pr={2}>
@@ -19,12 +19,14 @@ export default function MyCardColorInfo() {
             size="large"
             onClick={() => false}
             children={dataCardColorInfo.button}
-            bgcolorselect={theme.palette.primary.main}
-            bgcolorhover={theme.palette.secondary.main}
+            bgcolorselect={"#6a1b9ae0"}
+            bgcolorhover={"#fafafae0"}
+            fontweighthover={800}
+            myfontweight={800}
             colorhover={theme.palette.primary.light}
             />
         </Stack>
-        <Stack direction={{xs: "column", sm: "column", md: "row"}} spacing={2} p={1} bgcolor="#6a1b9a" borderRadius={"9px"}>
+        <Stack direction={{xs: "column", sm: "column", md: "row"}} spacing={2} p={1} bgcolor="#6a1b9ae0" borderRadius={"9px"}>
           <Stack direction="row" spacing={1}>
             <CheckIcon sx={{ height: 20, width: 20 }} />
             <TypograpyDesc children={dataCardColorInfo.descLeft} />
