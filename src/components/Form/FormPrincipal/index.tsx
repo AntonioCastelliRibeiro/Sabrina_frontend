@@ -18,12 +18,12 @@ export default function FormPrincipal() {
         <Content>
             <Container maxWidth="lg">
                 <Stack alignItems="center" spacing={2}>
-                    <CompFirst />
-                    <CompSec />                    
+                    <CompFirst />                    
+                    <CompSec />
                 </Stack>
-            </Container>  
+            </Container>
             <Stack>
-                <CompThird />                
+                <CompThird />
                 <CompFour />
                 <CompFive />
                 <CompSix />
